@@ -1,0 +1,16 @@
+language: java 
+jdk:
+  - openjdk8
+install:
+  - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+
+before_deploy:
+  # Set up git user name and tag this commit
+  - git config --local user.name "Dmitry Trofimov"
+  - git config --local user.email "dmitry.trofimov@jetbrains.com"
+  - git tag "$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)"
+deploy:
+  provider: releases
+  api_key: "$api_key"
+  file: "target/resources_kr.jar"
+  skip_cleanup: true
