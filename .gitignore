@@ -1,2 +1,4 @@
 .idea/workspace.xml
 target
+.gradle/**
+build

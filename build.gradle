@@ -1,0 +1,22 @@
+apply plugin: 'java'
+apply plugin: 'maven'
+
+group = 'traff'
+description = """PyCharm Korean support"""
+
+
+sourceCompatibility = 1.5
+targetCompatibility = 1.5
+
+jar {
+    baseName = "pycharm_kr"
+    exclude("fileTemplates_kr/**")
+    exclude("inspectionDescriptions/**")
+    exclude("intentionDescriptions/**")
+    exclude("search/**")
+    exclude("tips/**")
+}
+
+repositories {
+    maven { url "http://repo.maven.apache.org/maven2" }
+}
