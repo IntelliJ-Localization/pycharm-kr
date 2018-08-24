@@ -20,7 +20,7 @@ To use the translation bundle in PyCharm:
  * Copy build/libs/resources_kr.jar to $PYCHARM_HOME$/lib (where resource_en.jar is located).
  * Open or restart PyCharm.
 
- If your locale is Korean (ko_KR), then PyChar will start with the UI translated to Korean.
+ If your locale is Korean (ko_KR), then PyCharm will start with the UI translated to Korean.
 
 *Note: not all UI strings are yet translated, so some strings may be still in English.*
 
