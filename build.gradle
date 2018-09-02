@@ -1,6 +1,8 @@
 apply plugin: 'java'
 apply plugin: 'maven'
 
+import org.apache.tools.ant.filters.EscapeUnicode
+
 group = 'traff'
 description = """PyCharm Korean support"""
 
@@ -15,6 +17,8 @@ jar {
     exclude("intentionDescriptions/**")
     exclude("search/**")
     exclude("tips/**")
+
+    filter(EscapeUnicode)
 }
 
 repositories {
