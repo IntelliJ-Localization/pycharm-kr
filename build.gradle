@@ -18,6 +18,8 @@ jar {
     exclude("search/**")
     exclude("tips/**")
 
+    filteringCharset = 'UTF-8'
+
     filter(EscapeUnicode)
 }
 
