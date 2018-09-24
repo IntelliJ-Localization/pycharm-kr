@@ -39,3 +39,7 @@ task i18nCoverageReport(type: com.intellij.i18n.CoverageI18N) {
 tasks.coveralls {
     dependsOn 'i18nCoverageReport'
 }
+
+coveralls {
+    sourceDirs = files(sourceSets.main.resources).files.absolutePath
+}
