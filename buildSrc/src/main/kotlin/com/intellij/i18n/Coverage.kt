@@ -67,7 +67,7 @@ open class CoverageI18N: DefaultTask() {
 
                 for ((i, k) in config.keys.withIndex()) {
                     val str = config.getString(k)
-                    val cnt = if (!notTranslated(str)) CounterImpl.COUNTER_0_1 else CounterImpl.COUNTER_0_1
+                    val cnt = if (!notTranslated(str)) CounterImpl.COUNTER_0_1 else CounterImpl.COUNTER_1_0
 
                     source.increment(cnt, CounterImpl.COUNTER_0_0, i)
                 }
