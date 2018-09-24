@@ -44,7 +44,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$USER_HOME$/.gradle/wrapper/dists/gradle-4.5.1-bin/a5vbgfvpwtoqz8v2cdivxz28k/gradle-4.5.1/lib/gradle-installation-beacon-4.5.1.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/wrapper/dists/gradle-4.5.1-bin/a5vbgfvpwtoqz8v2cdivxz28k/gradle-4.5.1/lib/groovy-all-2.4.12.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -53,7 +53,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$USER_HOME$/.gradle/wrapper/dists/gradle-4.5.1-bin/a5vbgfvpwtoqz8v2cdivxz28k/gradle-4.5.1/lib/groovy-all-2.4.12.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/wrapper/dists/gradle-4.5.1-bin/a5vbgfvpwtoqz8v2cdivxz28k/gradle-4.5.1/lib/gradle-installation-beacon-4.5.1.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />

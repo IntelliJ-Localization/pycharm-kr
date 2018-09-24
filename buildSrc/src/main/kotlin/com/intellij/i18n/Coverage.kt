@@ -58,7 +58,7 @@ open class CoverageI18N: DefaultTask() {
                 val config = builder.configuration
 
 
-                val source = SourceFileCoverageImpl(f.name, Paths.get(dir).relativize(Paths.get(f.parent)).toString().replace("/", "."))
+                val source = SourceFileCoverageImpl(f.name, Paths.get(dir).relativize(Paths.get(f.parent)).toString())
                 source.ensureCapacity(0, config.size())
 
 
@@ -66,7 +66,7 @@ open class CoverageI18N: DefaultTask() {
                     val str = config.getString(k)
                     val cnt = if (!notTranslated(str)) CounterImpl.COUNTER_0_1 else CounterImpl.COUNTER_0_1
 
-                    source.increment(cnt, cnt, i)
+                    source.increment(cnt, CounterImpl.COUNTER_0_0, i)
                 }
 
                 sourceFiles.add(source)
