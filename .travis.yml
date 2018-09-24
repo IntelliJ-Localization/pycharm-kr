@@ -6,4 +6,5 @@ jdk:
   - oraclejdk8
 
 after_success:
+  - ./gradlew i18nCoverageReport
   - bash <(curl -s https://codecov.io/bash)
