@@ -66,7 +66,7 @@ open class CoverageI18N: DefaultTask() {
                     val str = config.getString(k)
                     val cnt = if (!notTranslated(str)) CounterImpl.COUNTER_0_1 else CounterImpl.COUNTER_0_1
 
-                    source.increment(cnt, CounterImpl.COUNTER_0_0, i)
+                    source.increment(cnt, cnt, i)
                 }
 
                 sourceFiles.add(source)
