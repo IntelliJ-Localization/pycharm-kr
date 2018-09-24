@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/traff/pycharm_kr.svg?branch=master)](https://travis-ci.org/traff/pycharm_kr)
+[![Build Status](https://travis-ci.org/traff/pycharm-kr.svg?branch=master)](https://travis-ci.org/traff/pycharm-kr)
 
 [![Coverage Status](https://coveralls.io/repos/github/traff/pycharm_kr/badge.svg?branch=master)](https://coveralls.io/github/traff/pycharm_kr?branch=master)
 
