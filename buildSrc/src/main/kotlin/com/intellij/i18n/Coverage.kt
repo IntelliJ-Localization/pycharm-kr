@@ -5,7 +5,7 @@ import org.apache.commons.configuration2.PropertiesConfiguration
 import org.apache.commons.configuration2.builder.FileBasedConfigurationBuilder
 import org.apache.commons.configuration2.builder.fluent.Parameters
 import org.apache.commons.configuration2.convert.DefaultListDelimiterHandler
-import org.apache.commons.lang3.StringEscapeUtils
+import org.apache.commons.lang3.StringEscapeUtils.unescapeJava
 import org.gradle.api.DefaultTask
 import org.gradle.api.tasks.TaskAction
 import org.jacoco.core.analysis.ISourceFileCoverage
@@ -65,7 +65,7 @@ open class CoverageI18N: DefaultTask() {
                 f.readLines().forEach {
                     val ind = it.indexOf("=")
                     if (ind != -1) {
-                        map.put(StringEscapeUtils.unescapeJava(it.substring(0, ind).trim()), i)
+                        map[unescapeJava(it.substring(0, ind).trim())] = i
                     }
                     i++
                 }
