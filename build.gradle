@@ -32,7 +32,7 @@ repositories {
 
 task i18nCoverageReport(type: com.intellij.i18n.CoverageI18N) {
     outputDir = "$project.buildDir"
-    packagePrefix = "src/main/resources/"
+    packagePrefix = ""
     dir = "$project.buildDir/resources/main"
 }
 
@@ -41,5 +41,5 @@ tasks.coveralls {
 }
 
 coveralls {
-    sourceDirs = files(sourceSets.main.resources).files.absolutePath
+    sourceDirs += ['src/main/resources']
 }
