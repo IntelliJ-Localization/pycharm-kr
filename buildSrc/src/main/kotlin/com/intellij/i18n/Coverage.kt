@@ -23,13 +23,15 @@ import java.nio.file.Paths
  * @author traff
  */
 open class CoverageI18N: DefaultTask() {
+    lateinit var outputDir: String
+    lateinit var packagePrefix: String
     lateinit var dir: String
 
     @TaskAction
     fun main() {
         val formatter = XMLFormatter()
 
-        val file = File(dir, "reports/jacoco/test/jacocoTestReport.xml")
+        val file = File(outputDir, "reports/jacoco/test/jacocoTestReport.xml")
         file.parentFile.mkdirs()
         file.createNewFile()
 
@@ -58,7 +60,8 @@ open class CoverageI18N: DefaultTask() {
                 val config = builder.configuration
 
 
-                val source = SourceFileCoverageImpl(f.name, Paths.get(dir).relativize(Paths.get(f.parent)).toString())
+                val path = Paths.get(dir).relativize(Paths.get(f.parent)).toString()
+                val source = SourceFileCoverageImpl(f.name, packagePrefix + path)
                 source.ensureCapacity(0, config.size())
 
 

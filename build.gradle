@@ -1,6 +1,7 @@
 plugins {
     id 'java'
     id 'maven'
+    id 'com.github.kt3k.coveralls' version '2.8.2'
 }
 
 import org.apache.tools.ant.filters.EscapeUnicode
@@ -30,5 +31,11 @@ repositories {
 }
 
 task i18nCoverageReport(type: com.intellij.i18n.CoverageI18N) {
-    dir = "$project.buildDir"
+    outputDir = "$project.buildDir"
+    packagePrefix = "src/main/resources/"
+    dir = "$project.buildDir/resources/main"
+}
+
+tasks.coveralls {
+    dependsOn 'i18nCoverageReport'
 }
