@@ -1,7 +1,9 @@
 language: java
 
+sudo: false # faster builds
+
 jdk:
   - oraclejdk8
 
 after_success:
-  - ./gradlew coveralls
+  - bash <(curl -s https://codecov.io/bash)

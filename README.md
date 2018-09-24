@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/traff/pycharm-kr.svg?branch=master)](https://travis-ci.org/traff/pycharm-kr)
 
-[![Coverage Status](https://coveralls.io/repos/github/traff/pycharm-kr/badge.svg?branch=master)](https://coveralls.io/github/traff/pycharm-kr?branch=master)
+[![Messages Translated](https://codecov.io/gh/traff/pycharm-kr/branch/master/graph/badge.svg)](https://codecov.io/gh/traff/pycharm-kr)
 
 
 ## How to build translation bundle
