@@ -29,7 +29,7 @@ open class CoverageI18N: DefaultTask() {
     fun main() {
         val formatter = XMLFormatter()
 
-        val file = File(dir, "reports/jacoco/test/report.xml")
+        val file = File(dir, "reports/jacoco/test/jacocoTestReport.xml")
         file.parentFile.mkdirs()
         file.createNewFile()
 
