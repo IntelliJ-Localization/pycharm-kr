@@ -1,2 +1,2 @@
 fixes:
-  "::src/main"
+  "resources/main/::src/main/resources/"
