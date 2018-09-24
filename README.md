@@ -1,3 +1,6 @@
+[![Coverage Status](https://coveralls.io/repos/github/traff/pycharm_kr/badge.svg?branch=master)](https://coveralls.io/github/traff/pycharm_kr?branch=master)
+
+
 ## How to build translation bundle
 
 To build the resources_kr.jar bundle on Linux and macOs please run
