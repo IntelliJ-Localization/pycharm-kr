@@ -60,7 +60,7 @@ open class CoverageI18N: DefaultTask() {
                                         .setListDelimiterHandler(DefaultListDelimiterHandler(',')))
                 val config = builder.configuration
 
-                var i = 0
+                var i = 1
                 val map = HashMap<String, Int>()
                 f.readLines().forEach {
                     val ind = it.indexOf("=")
