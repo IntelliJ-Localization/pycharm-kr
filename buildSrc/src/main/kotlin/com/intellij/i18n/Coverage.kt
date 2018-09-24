@@ -5,6 +5,7 @@ import org.apache.commons.configuration2.PropertiesConfiguration
 import org.apache.commons.configuration2.builder.FileBasedConfigurationBuilder
 import org.apache.commons.configuration2.builder.fluent.Parameters
 import org.apache.commons.configuration2.convert.DefaultListDelimiterHandler
+import org.apache.commons.lang3.StringEscapeUtils
 import org.gradle.api.DefaultTask
 import org.gradle.api.tasks.TaskAction
 import org.jacoco.core.analysis.ISourceFileCoverage
@@ -59,17 +60,32 @@ open class CoverageI18N: DefaultTask() {
                                         .setListDelimiterHandler(DefaultListDelimiterHandler(',')))
                 val config = builder.configuration
 
+                var i = 0
+                val map = HashMap<String, Int>()
+                f.readLines().forEach {
+                    val ind = it.indexOf("=")
+                    if (ind != -1) {
+                        map.put(StringEscapeUtils.unescapeJava(it.substring(0, ind).trim()), i)
+                    }
+                    i++
+                }
+
 
                 val path = Paths.get(dir).relativize(Paths.get(f.parent)).toString()
                 val source = SourceFileCoverageImpl(f.name, packagePrefix + path)
                 source.ensureCapacity(0, config.size())
 
 
-                for ((i, k) in config.keys.withIndex()) {
+                for (k in config.keys) {
                     val str = config.getString(k)
                     val cnt = if (!notTranslated(str)) CounterImpl.COUNTER_0_1 else CounterImpl.COUNTER_1_0
 
-                    source.increment(cnt, CounterImpl.COUNTER_0_0, i)
+                    val lineNo = map.get(k)
+                    if (lineNo != null) {
+                        source.increment(cnt, CounterImpl.COUNTER_0_0, lineNo)
+                    } else {
+                        println("'$k' not found in map")
+                    }
                 }
 
                 sourceFiles.add(source)
