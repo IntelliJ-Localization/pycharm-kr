@@ -38,6 +38,7 @@ To make a translation:
  * fork this repository
  * find strings to be translated in the *_ko_KR.properties files and change English text
 to a corresponding Korean
+ * to find strings that are to be translated you can use a [coverage report](https://coveralls.io/github/traff/pycharm-kr?branch=master)
  * commit changes
  * make pull-request
 
