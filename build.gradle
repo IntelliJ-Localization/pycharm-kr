@@ -2,6 +2,8 @@ plugins {
     id 'java'
     id 'maven'
     id 'com.github.kt3k.coveralls' version '2.8.2'
+
+    id 'org.intellij.l10n.coverage' version "0.0.1"
 }
 
 import org.apache.tools.ant.filters.EscapeUnicode
@@ -30,7 +32,7 @@ repositories {
     maven { url "http://repo.maven.apache.org/maven2" }
 }
 
-task i18nCoverageReport(type: com.intellij.i18n.CoverageI18N) {
+coverage {
     outputDir = "$project.buildDir"
     packagePrefix = ""
     dir = "$project.buildDir/resources/main"
