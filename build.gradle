@@ -39,7 +39,7 @@ coverage {
 }
 
 tasks.coveralls {
-    dependsOn 'i18nCoverageReport'
+    dependsOn "localizationCoverageReport"
 }
 
 coveralls {
