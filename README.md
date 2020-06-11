@@ -1,3 +1,5 @@
+This project is no longer maintained. Please use the official bundle: https://plugins.jetbrains.com/plugin/13711-korean-language-pack-eap 
+
 [![Build Status](https://travis-ci.org/traff/pycharm-kr.svg?branch=master)](https://travis-ci.org/traff/pycharm-kr)
 
 [![Coverage Status](https://coveralls.io/repos/github/traff/pycharm-kr/badge.svg?branch=master)](https://coveralls.io/github/traff/pycharm-kr?branch=master)
